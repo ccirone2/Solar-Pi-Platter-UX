@@ -2,7 +2,9 @@
 
 This is a web interface to interact with the <a href="http://danjuliodesigns.com/products/solar_pi_platter/solar_pi_platter.html">Solar Pi Platter</a> offered by <a href="http://danjuliodesigns.com/">Dan Julio Designs</a> which can be purchased on <a href="https://www.tindie.com/products/globoy/solar-pi-platter/">Tindie</a>.
 
-<img src="https://github.com/ccirone2/Solar-Pi-Platter-UX/blob/master/static/img/dan-julio-image_2849.png">
+<img src="https://github.com/ccirone2/Solar-Pi-Platter-UX/blob/master/static/img/dan-julio-image_2849.png" height="200">
+<img src="https://github.com/ccirone2/Solar-Pi-Platter-UX/blob/master/static/img/desktop-UX-screenshot.png" height="200">
+<img src="https://github.com/ccirone2/Solar-Pi-Platter-UX/blob/master/static/img/mobile-UX-screenshot.png" height="200">
 
 <ol>
 <li> Download/install talkpp binary from Dan Julio's github.
