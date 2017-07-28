@@ -8,6 +8,8 @@ This is a web interface to interact with the <a href="http://danjuliodesigns.com
 <img src="https://github.com/ccirone2/Solar-Pi-Platter-UX/blob/master/static/img/mobile-UX-screenshot.png" height="220">
 </div>
 
+This project will allow a user to connect to their Solar Pi Platter using a web browser in order to view and change system settings.
+
 <ol>
 <li> Install Raspbian-Jessie or Raspbian Jessie-Lite on your Pi Zero (W) -- not covered here
 <li> Download/install talkpp binary from Dan Julio's github.
