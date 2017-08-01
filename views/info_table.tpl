@@ -19,7 +19,8 @@
                 </td>
                 %else:
                 <td id='value'>{{entry[item]}}</td>
-                %end %end
+                %end
+                %end
             </tr>
             %end
         </table>
