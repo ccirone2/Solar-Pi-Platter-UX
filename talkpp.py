@@ -4,12 +4,10 @@ import os
 
 # Get info from Pi_Platter
 def command(arg):
-
 	if arg=='-s' or arg=='-t' or arg=='-f' or arg=='-a' or arg=='-d' or arg=='-w':
 		stout = subprocess.check_output(['talkpp', arg]).strip()
 	else:
-        	stout = subprocess.check_output(['talkpp', '-c', arg]).strip()
-
+        stout = subprocess.check_output(['talkpp', '-c', arg]).strip()
 	return stout
 
 # Write to Pi_Platter
@@ -54,6 +52,7 @@ def status_info():
 
 	return status
 
+# Decode the analog setting code
 def analog_info(arg):
 
         if arg == '0':
@@ -65,11 +64,11 @@ def analog_info(arg):
         elif arg == '3':
                 amode = '4.096 V'
         else:
-                amode = [arg, type(arg)]
-
+        		# return info for debugging
+                amode = [arg, type(arg)] 
         return amode
 
-
+# Decode the PWM setting code
 def PWM_info(arg):
 	
 	if arg == '0':
@@ -81,8 +80,8 @@ def PWM_info(arg):
 	elif arg == '3':
 		pwmmode = 'Servo Mode'
 	else:
+		# return info for debugging
 		pwmmode = [arg, type(arg)]
-
 	return pwmmode
 
 
