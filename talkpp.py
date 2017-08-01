@@ -100,31 +100,31 @@ def pp_configs(arg):
 			{'power off':command('O')},
 			{'wakeup':command('W')},
 			{'wakeup pretty':command('-w')},
-                        {'wakeup repeat':command('R')},
+			{'wakeup repeat':command('R')},
 			]
 
         elif arg == 'io':
 		return [
 			{'USB-2':command('U1')},
-                        {'USB-3':command('U2')},
-    		        {'analog-1':command('A1')},
-                        {'analog-2':command('A2')},
-                        {'PWM-1':command('P1')},
-                        {'PWM-2':command('P2')},
-	               ]
+			{'USB-3':command('U2')},
+			{'analog-1':command('A1')},
+			{'analog-2':command('A2')},
+			{'PWM-1':command('P1')},
+			{'PWM-2':command('P2')},
+			]
 
         elif arg == 'control':
 		return [
-			{'C0: Wakeup Enable':command('C0')},
-                        {'C1: Low Battery Warning Enable':command('C1')},
-                        {'C2: Critical Battery Warning Enable':command('C2')},
-                        {'C3: USB Fault Warning Enable':command('C3')},
-                        {'C4: Analog 1 Reference':analog_info(command('C4'))},
-                        {'C5: Analog 2 Reference':analog_info(command('C5'))},
-                        {'C6: PWM Mode':PWM_info(command('C6'))},
-                        {'C7: Restart Enable':command('C7')},
-                        {'C8: Watchdog Control':command('C8')},
-		       ]
+			{'C0: Wakeup Enable':{'setting':command('C0'),'control':{'ON':'C0=1','OFF':'C0=0'}}},
+			{'C1: Low Battery Warning Enable':{'setting':command('C1'),'control':{'ON':'C1=1','OFF':'C1=0'}}},
+			{'C2: Critical Battery Warning Enable':{'setting':command('C2'),'control':{'ON':'C2=1','OFF':'C2=0'}}},
+			{'C3: USB Fault Warning Enable':{'setting':command('C3'),'control':{'ON':'C3=1','OFF':'C3=0'}}},
+			{'C4: Analog 1 Reference':analog_info(command('C4'))},
+			{'C5: Analog 2 Reference':analog_info(command('C5'))},
+			{'C6: PWM Mode':PWM_info(command('C6'))},
+			{'C7: Restart Enable':{'setting':command('C7'),'control':{'ON':'C7=1','OFF':'C7=0'}}},
+			{'C8: Watchdog Control':{'setting':command('C8'),'control':{'ON':'C8=1','OFF':'C8=0'}}},
+			]
 
         elif arg == 'eeprom':
 		return [
