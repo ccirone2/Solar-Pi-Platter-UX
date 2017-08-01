@@ -3,7 +3,7 @@
 import bottle
 import os
 from bottle import route, get, post, run, template, static_file, request, redirect
-from talkpp import pp_configs, command
+from talkpp import pp_configs, command, write2pp
 
 base_path = os.path.abspath(os.path.dirname(__file__))
 views_path = os.path.join(base_path, 'views')
@@ -19,9 +19,14 @@ def stylesheets(filename):
 
 @post('/payload')
 def button_payload():
-	arg = request.POST.get('btn0')
-	command(arg)
-	redirect('/general')
+	return_to = request.POST.get('page') 
+	arg = request.POST.get('btn')
+	if '=' in arg:
+		bitname, val = arg.split('=')
+		write2pp(bitname, val)
+	else:
+		command(arg)
+	redirect('/'+return_to)
 
 @route('/')
 def index():

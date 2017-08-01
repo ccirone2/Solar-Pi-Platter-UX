@@ -14,8 +14,9 @@
                 <td id='value'>{{entry[item]['setting']}}</td>
                 <td id='control'>
                     <form method="POST" action="/payload">
-                        %for button in entry[item]['control']:			
-                        <button type="submit" name="btn0" value="{{entry[item]['control'][button]}}">
+                        <button hidden="hidden" name="page" value={{group}}></button>
+                        %for button in entry[item]['control']:
+                        <button type="submit" name="btn" value="{{entry[item]['control'][button]}}">
                             {{button}}
                         </button>
                         %end
