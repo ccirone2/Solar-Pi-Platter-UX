@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-from bottle import route, get, run, template, static_file, request
+from bottle import route, get, post, run, template, static_file, request
 from talkpp import pp_configs, command
 
 HOST = '0.0.0.0'
