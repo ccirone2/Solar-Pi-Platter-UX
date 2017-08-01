@@ -7,7 +7,7 @@ def command(arg):
 	if arg=='-s' or arg=='-t' or arg=='-f' or arg=='-a' or arg=='-d' or arg=='-w':
 		stout = subprocess.check_output(['talkpp', arg]).strip()
 	else:
-        stout = subprocess.check_output(['talkpp', '-c', arg]).strip()
+		stout = subprocess.check_output(['talkpp', '-c', arg]).strip()
 	return stout
 
 # Write to Pi_Platter
