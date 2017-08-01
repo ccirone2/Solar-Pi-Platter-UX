@@ -1,4 +1,5 @@
-%# info_table.tpl % rebase('base.tpl')
+%# info_table.tpl 
+% rebase('base.tpl')
 <main class="main-content">
     <div class="table-wrapper">
         <table id="{{group}}">
@@ -13,8 +14,9 @@
                 <td id='value'>{{entry[item]['setting']}}</td>
                 <td id='control'>
                     <form method="POST" action="/payload">
-                        <input type="hidden" name="btn_lbl" value="{{entry[item]['control'].keys()[0]}}">
-                        <input type="submit" name="{{entry[item]['control'].keys()[0]}}" value="{{entry[item]['control'].values()[0]}}">
+			<button type="submit" name="btn0" value="{{entry[item]['control'].values()[0]}}">
+				{{entry[item]['control'].keys()[0]}}
+			</button>
                     </form>
                 </td>
                 %else:
@@ -26,8 +28,3 @@
         </table>
     </div>
 </main>
-<script>
-function post() {
-    alert("Hello world!");
-}
-</script>

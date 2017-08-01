@@ -1,7 +1,13 @@
 #!/usr/bin/python
 
-from bottle import route, get, post, run, template, static_file, request
+import bottle
+import os
+from bottle import route, get, post, run, template, static_file, request, redirect
 from talkpp import pp_configs, command
+
+base_path = os.path.abspath(os.path.dirname(__file__))
+views_path = os.path.join(base_path, 'views')
+bottle.TEMPLATE_PATH.insert(0, views_path)
 
 HOST = '0.0.0.0'
 PORT = 8080
@@ -13,9 +19,9 @@ def stylesheets(filename):
 
 @post('/payload')
 def button_payload():
-	button_label = request.POST.get('btn_lbl')
-	arg = request.POST.get(button_label)
+	arg = request.POST.get('btn0')
 	command(arg)
+	redirect('/general')
 
 @route('/')
 def index():
