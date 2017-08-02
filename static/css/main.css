@@ -63,7 +63,7 @@ Grid Elements-Container
 
 .sidebar a:hover,
 .sidebar a:active {
-	color: red;
+	color: yellowgreen;
 }
 
 .main-content {
@@ -139,8 +139,22 @@ td {
 }
 
 td#control {
+  padding: 0.3em;
   border: none;
-  display: inline;
+  display: flex;
+  justify-content:space-around;
+}
+
+button {
+	color: #333;
+	  
+}
+
+button:hover,
+button:active {
+	background: lightblue;
+	color:white;
+	border-color:lightblue;
 }
 
 /* xs < 768 */ 

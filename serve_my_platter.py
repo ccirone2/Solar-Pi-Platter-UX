@@ -15,7 +15,7 @@ DEBUG = True
 
 @get('/<filename:re:.*\.css>')
 def stylesheets(filename):	
-	return static_file(filename, root='static/css/')
+	return static_file(filename, root=base_path+'/static/css/')
 
 @post('/payload')
 def button_payload():
@@ -24,7 +24,7 @@ def button_payload():
 	if '=' in arg:
 		bitname, val = arg.split('=')
 		write2pp(bitname, val)
-	else:
+	elif '-' in arg:
 		command(arg)
 	redirect('/'+return_to)
 
