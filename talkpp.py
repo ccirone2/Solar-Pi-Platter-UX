@@ -119,8 +119,8 @@ def pp_configs(arg):
 			{'C1: Low Battery Warning Enable':{'setting':command('C1'),'control':{'ON':'C1=1','OFF':'C1=0'}}},
 			{'C2: Critical Battery Warning Enable':{'setting':command('C2'),'control':{'ON':'C2=1','OFF':'C2=0'}}},
 			{'C3: USB Fault Warning Enable':{'setting':command('C3'),'control':{'ON':'C3=1','OFF':'C3=0'}}},
-			{'C4: Analog 1 Reference':{'setting':analog_info(command('C4')),'control':{'PMIC/RTC VCC':'C4=0','1.024 V':'C4=1','2.048 V':'C4=2','4.096 V':'C4=3'}}},
-			{'C5: Analog 2 Reference':{'setting':analog_info(command('C5')),'control':{'PMIC/RTC VCC':'C5=0','1.024 V':'C5=1','2.048 V':'C5=2','4.096 V':'C5=3'}}},
+			{'C4: Analog 1 Reference':{'setting':analog_info(command('C4')),'control':{'PMIC':'C4=0','1.024 V':'C4=1','2.048 V':'C4=2','4.096 V':'C4=3'}}},
+			{'C5: Analog 2 Reference':{'setting':analog_info(command('C5')),'control':{'PMIC':'C5=0','1.024 V':'C5=1','2.048 V':'C5=2','4.096 V':'C5=3'}}},
 			{'C6: PWM Mode':{'setting':PWM_info(command('C6')),'control':{'Fast':'C6=0','Medium':'C6=1','Slow':'C6=2','Servo':'C6=3'}}},
 			{'C7: Restart Enable':{'setting':command('C7'),'control':{'ON':'C7=1','OFF':'C7=0'}}},
 			{'C8: Watchdog Control':{'setting':command('C8'),'control':{'ON':'C8=1','OFF':'C8=0'}}},
@@ -139,8 +139,8 @@ def pp_configs(arg):
                         {'E8: USB Fault Message Enable':{'setting':command('E8'),'control':{'ON':'E8=1','OFF':'E8=0'}}},
                         {'E9: USB Port 2 Default Power Enable':{'setting':command('E9'),'control':{'ON':'E9=1','OFF':'E9=0'}}},
                         {'E10: USB Port 3 Default Power Enable':{'setting':command('E10'),'control':{'ON':'E10=1','OFF':'E10=0'}}},
-                        {'E11: Analog 1 Default Reference':{'setting':analog_info(command('E11')),'control':{'PMIC/RTC VCC':'E11=0','1.024 V':'E11=1','2.048 V':'E11=2','4.096 V':'E11=3'}}},
-                        {'E12: Analog 2 Default Reference':{'setting':analog_info(command('E12')),'control':{'PMIC/RTC VCC':'E12=0','1.024 V':'E12=1','2.048 V':'E12=2','4.096 V':'E12=3'}}},
+                        {'E11: Analog 1 Default Reference':{'setting':analog_info(command('E11')),'control':{'PMIC':'E11=0','1.024 V':'E11=1','2.048 V':'E11=2','4.096 V':'E11=3'}}},
+                        {'E12: Analog 2 Default Reference':{'setting':analog_info(command('E12')),'control':{'PMIC':'E12=0','1.024 V':'E12=1','2.048 V':'E12=2','4.096 V':'E12=3'}}},
                         {'E13: PWM Mode':{'setting':PWM_info(command('E13')),'control':{'Fast':'E13=0','Medium':'E13=1','Slow':'E13=2','Servo':'E13=3'}}},
                        ]
 
